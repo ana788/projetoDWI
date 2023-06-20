@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Projeto Final API</title>
+</head>
+<body>
+    <header>
+        <div class="barraSuperior">
+            <img src="./img/logo_volante.png" alt="Logo do site">
+            <h1>Carros do Brasil</h1>
+            <button onclick="abrirModal('#addCard')">Pesquisar carros</button>
+        </div>
+    </header>
+
+    <div id="cards-list">
+        
+    </div>
+
+    <div class="modal" id="addCard">
+        <div class="modal-content">
+            <h2>Add Card Info</h2>
+            <img class="close" onclick="fecharModal('#addCard')" src="/img/fechar-simbolo-de-botao-circular.png">
+            <form onsubmit="AdicionarCard(event)">
+                <input type="text" name="marca">
+                <input type="submit" value="Adicionar">
+            </form>
+            <p>OBS: Pesquise por modelo, marca ou ano</p>
+        </div>
+    </div>
+
+
+    <script src="./js/main.js"></script>
+</body>
+</html>
