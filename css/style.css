@@ -22,7 +22,7 @@ header{
 }
 
 .barraSuperior img{
-    width: 70px;
+    width: 65px;
 }
 
 .barraSuperior h1{
@@ -31,16 +31,22 @@ header{
     margin: auto 10px;
 }
 
+.barraSuperior .btn{
+    display: flex;
+    margin: auto 0 auto 600px;
+    gap: 20px;
+}
+
 .barraSuperior button{
     display: inline-block;
     width: 120px;
     height: 30px;
-    margin: auto 0 auto auto;
     border: none;
     border-radius: 5px;
     color:#013a28;
     cursor: pointer;
 }
+
 
 .modal{
     display: none;
@@ -82,6 +88,15 @@ header{
     padding: 10px 5px;
     cursor: pointer;
     filter: brightness(100%);
+}
+
+.modal .modal-content form{
+    font-family: 'Montserrat';
+    color: #fff;
+    text-align: center;
+}
+.modal .modal-content input{
+    margin-left: 10px;
 }
 
 #cards-list{

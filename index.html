@@ -12,26 +12,47 @@
         <div class="barraSuperior">
             <img src="./img/logo_volante.png" alt="Logo do site">
             <h1>Carros do Brasil</h1>
-            <button onclick="abrirModal('#addCard')">Pesquisar carros</button>
+            <div class="btn">
+                <button onclick="abrirModal('#editarMarcas')">Editar lista</button>
+                <button onclick="abrirModal('#addCard')">Pesquisar carros</button>
+            </div>
+           
         </div>
     </header>
 
     <div id="cards-list">
-        
+       
     </div>
 
     <div class="modal" id="addCard">
         <div class="modal-content">
-            <h2>Add Card Info</h2>
+            <h2>Add Cards</h2>
             <img class="close" onclick="fecharModal('#addCard')" src="/img/fechar-simbolo-de-botao-circular.png">
             <form onsubmit="AdicionarCard(event)">
                 <input type="text" name="marca">
                 <input type="submit" value="Adicionar">
             </form>
-            <p>OBS: Pesquise por modelo, marca ou ano</p>
+            <p>OBS: Pesquise pela marca do carro</p>
         </div>
     </div>
 
+    <div class="modal" id="editarMarcas">
+        <div class="modal-content">
+            <h2>Editar veículo</h2>
+            <img class="close" onclick="fecharModal('#editarMarcas')" src="/img/fechar-simbolo-de-botao-circular.png">
+            <form onsubmit="editarCard(event)">
+                <input type="radio" id="carro" name="veiculos" value="carros" checked>
+                <label for="carro">Carro</label>
+                <input type="radio" id="moto" name="veiculos" value="motos">
+                <label for="moto">Moto</label>
+                <input type="radio" id="caminhao" name="veiculos" value="caminhoes">
+                <label for="caminhao">Caminhão</label>
+
+                <input type="submit" value="Enviar">
+            </form>
+            <p>OBS: Selecione o tipo de veículo que você deseja ver as marcas</p>
+        </div>
+    </div>
 
     <script src="./js/main.js"></script>
 </body>
